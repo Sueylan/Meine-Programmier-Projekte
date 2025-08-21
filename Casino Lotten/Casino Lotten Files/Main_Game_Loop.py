@@ -129,7 +129,9 @@ Titel = ("""   _____          _               _           _   _
                                                                 """)
 
 
-Casino_sheet = Exel_spreedshet(r"C:\Users\sueyl\Desktop\Coding\Phyton\Project\Casino Lotten\Casino Lotten Files\Info Player spreedshet.xlsx")
+script_dir = os.path.dirname(os.path.realpath("Info Player spreedshet.xlsx"))
+excel_path = os.path.join(script_dir,'Info Player spreedshet.xlsx')
+Casino_sheet = Exel_spreedshet(excel_path)
 Is_spreedshet_open = Casino_sheet.Is_Spreedshet_open()
 if Is_spreedshet_open:
     print("The Exel File is open this will cause an Error")
@@ -344,4 +346,5 @@ while True:
                 print(f"Dealer: {Dealer_string}\n")
                 print(f"Player: {Player_string}")
                 time.sleep(4)
+
                 os.system("cls")
