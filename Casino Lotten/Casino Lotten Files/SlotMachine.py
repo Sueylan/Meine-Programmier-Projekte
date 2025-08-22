@@ -62,10 +62,10 @@ def check_answer(Board,Bet):
         print("You didin't win")
         Prise = -abs(Bet)
     return Prise
-def display_machine(Board):
+def display_machine(Board,current_bank):
     print("""                _________________
                 | ------------- |
-                | |XXXXXXXXXX$| |  ____
+                | |{:>10}$| |  ____
                 | ------------- | |    |
                 |  ____________ | |____|
                 | | {} | {}|  {} | | / /
@@ -75,12 +75,12 @@ def display_machine(Board):
                 | | {} | {}|  {} | |
                 | |___________| |
             ____|               |____
+            |       /\_____/\        |
+            |      /  o   o  \       | 
+            |     ( ==  ^  == )      |
+            |      )         (       |
+            |     (           )      |
+            |    ( (  )   (  ) )     |
+            |   (__(__)___(__)__)    |
             |                        |
-            |                        | 
-            |                        |
-            |                        |
-            |                        |
-            |                        |
-            |                        |
-            |                        |
-            |________________________|            """.format(Board[0],Board[1],Board[2],Board[3],Board[4],Board[5],Board[6],Board[7],Board[8],Board[9],Board[10],Board[11],Board[12],Board[13],Board[14]))
+            |________________________|            """.format(current_bank,Board[0],Board[1],Board[2],Board[3],Board[4],Board[5],Board[6],Board[7],Board[8],Board[9],Board[10],Board[11],Board[12],Board[13],Board[14]))
