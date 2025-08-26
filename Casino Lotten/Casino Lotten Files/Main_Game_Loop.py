@@ -232,7 +232,7 @@ while True:
                 continue
             for i in range(9 ):
                 Board = SlotMachine.create_board()
-                SlotMachine.display_machine(Board)
+                SlotMachine.display_machine(Board,Bank_acount - Bet)
                 time.sleep(0.5)
                 if not i == 8:
                     os.system("cls")
